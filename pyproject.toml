@@ -1,0 +1,22 @@
+[project]
+name = "attended-partshoering-uoplyst-indtaegt"
+version = "0.1.0"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "openpyxl>=3.1.5",
+    "selenium>=4.41.0",
+]
+
+[dependency-groups]
+dev = [
+    "flake8>=7.3.0",
+    "pylint>=4.0.5",
+]
+
+[tool.pylint]
+disable = [
+  "line-too-long",
+  "too-many-locals",
+  "too-few-public-methods",
+]
