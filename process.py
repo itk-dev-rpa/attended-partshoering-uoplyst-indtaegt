@@ -1,3 +1,4 @@
+"""This module contains the main process of the robot."""
 
 from datetime import datetime
 import time
@@ -163,13 +164,13 @@ def show_bank_info_popup(bank_info: list[BankInfo]) -> bool:
     return messagebox.askyesno("Bankinfo", message)
 
 
-def wait_for_browser_close(browser: Chrome, timeout: int=1200):
+def wait_for_browser_close(browser: Chrome, timeout: int = 1200):
     """Wait for the browser window to close.
     If the timeout is reached the browser is closed automatically.
     """
     try:
         while timeout > 0:
-            browser.current_window_handle
+            browser.current_window_handle  # pylint: disable=pointless-statement
             time.sleep(1)
             timeout -= 1
     except InvalidSessionIdException:
